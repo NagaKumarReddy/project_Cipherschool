@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My AWS Static Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <span class="logo">MyWebsite</span>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Hello, I'm <span class="highlight">A Student</span></h1>
+      <p>This website is hosted on <strong>Amazon S3</strong> as part of my cloud computing assignment.</p>
+      <button id="greetBtn">Say Hello 👋</button>
+      <p id="greetMessage" class="hidden"></p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="card-section">
+      <h2>About This Project</h2>
+      <p>
+        This is a static website deployed on <strong>AWS S3</strong> with public hosting enabled.
+        It demonstrates the ability to set up cloud infrastructure, configure bucket policies,
+        and deploy frontend files to a globally accessible URL.
+      </p>
+    </section>
+
+    <!-- Skills / Counter Section -->
+    <section id="skills" class="card-section">
+      <h2>Click Counter</h2>
+      <p>Track how many times you've clicked the button below:</p>
+      <div class="counter-box">
+        <button id="counterBtn">Click Me!</button>
+        <p>Count: <span id="countDisplay">0</span></p>
+        <button id="resetBtn" class="secondary">Reset</button>
+      </div>
+    </section>
+
+    <!-- Contact / Form Section -->
+    <section id="contact" class="card-section">
+      <h2>Contact</h2>
+      <div class="form-group">
+        <input type="text" id="nameInput" placeholder="Your name" />
+        <button id="submitName">Submit</button>
+      </div>
+      <p id="formResponse" class="hidden"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Hosted on AWS S3 &mdash; Cloud Computing Assignment &copy; 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

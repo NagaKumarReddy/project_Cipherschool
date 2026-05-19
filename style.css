@@ -1,0 +1,211 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #FF6B35;
+  --dark: #1a1a2e;
+  --light: #f5f5f0;
+  --card-bg: #ffffff;
+  --text: #333;
+  --muted: #666;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: var(--light);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ===== Nav ===== */
+header {
+  background-color: var(--dark);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: var(--primary);
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(135deg, var(--dark) 0%, #16213e 100%);
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+/* ===== Sections ===== */
+.card-section {
+  max-width: 700px;
+  margin: 3rem auto;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem;
+  box-shadow: var(--shadow);
+}
+
+.card-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--dark);
+  border-left: 4px solid var(--primary);
+  padding-left: 0.75rem;
+}
+
+.card-section p {
+  color: var(--muted);
+}
+
+/* ===== Buttons ===== */
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: #e05525;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button.secondary {
+  background-color: #aaa;
+  margin-left: 0.5rem;
+}
+
+button.secondary:hover {
+  background-color: #888;
+}
+
+/* ===== Counter ===== */
+.counter-box {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.counter-box p {
+  font-size: 1.1rem;
+  color: var(--text);
+  font-weight: bold;
+}
+
+#countDisplay {
+  color: var(--primary);
+  font-size: 1.4rem;
+}
+
+/* ===== Form ===== */
+.form-group {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary);
+}
+
+/* ===== Messages ===== */
+.hidden {
+  display: none;
+}
+
+#greetMessage, #formResponse {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--primary);
+  font-style: italic;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--dark);
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
